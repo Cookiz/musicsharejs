@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="applogin">
+<head>
+	<title>Music Share</title>
+	<!-- INCLUDE REQUIRED THIRD PARTY LIBRARY JAVASCRIPT AND CSS -->
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+
+
+    <script type="text/javascript" src="js/user/app.js"></script>
+
+    <!-- SOUNDCLOUD -->
+    <!--<script src="//connect.soundcloud.com/sdk.js"></script>
+    <script type="text/javascript" src="js/soundcloud/app.js"></script>
+    <script type="text/javascript" src="js/soundcloud/controllers/mainController.js"></script>-->
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class='banner'>
+        <div class='container'>
+            <h1>Music share</h1>
+        </div>
+    </div>
+
+    <div class="panel login" ng-view></div>
+
+    <!--<div class="container main-frame" ng-app="soundcloudApp" ng-controller="mainController" ng-init="init()">
+        <ul>
+            <li ng-repeat="value in results">
+                {{value.title}}
+                {{value.track}}
+                <ul ng-class="{'label-success' : value.track_count >= 1}">
+                    <li>{{track.title}}</li>
+                </ul>
+            </li>
+        </ul>
+    </div>-->
+
+
+</body>
+</html>
