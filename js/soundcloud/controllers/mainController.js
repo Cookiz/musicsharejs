@@ -21,9 +21,7 @@ app.controller("mainController", function($scope, $http){
         success(function(data, status, headers, config) {
 
           angular.forEach(data, function(value, index) {
-            if (value.kind === 'playlist') {
-              $scope.resultPlaylistsAndTracks.push(value);
-            }
+            $scope.resultPlaylistsAndTracks.push(value);
           })
 
         }).
