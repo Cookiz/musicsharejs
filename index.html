@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="applogin">
+<html>
 <head>
 	<title>Music Share</title>
 	<!-- INCLUDE REQUIRED THIRD PARTY LIBRARY JAVASCRIPT AND CSS -->
@@ -8,12 +8,12 @@
 	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
 
 
-    <script type="text/javascript" src="js/user/app.js"></script>
+    <!--<script type="text/javascript" src="js/user/app.js"></script>-->
 
     <!-- SOUNDCLOUD -->
-    <!--<script src="//connect.soundcloud.com/sdk.js"></script>
+    <script src="//connect.soundcloud.com/sdk.js"></script>
     <script type="text/javascript" src="js/soundcloud/app.js"></script>
-    <script type="text/javascript" src="js/soundcloud/controllers/mainController.js"></script>-->
+    <script type="text/javascript" src="js/soundcloud/controllers/mainController.js"></script>
 
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -24,19 +24,21 @@
         </div>
     </div>
 
-    <div class="panel login" ng-view></div>
+    <!--<div class="container login clearfix" ng-app="applogin" ng-view></div>-->
 
-    <!--<div class="container main-frame" ng-app="soundcloudApp" ng-controller="mainController" ng-init="init()">
+    <br /><br />
+    <div class="container" ng-app="soundcloudApp" ng-controller="mainController" ng-init="init()">
         <ul>
-            <li ng-repeat="value in results">
+            <li ng-repeat="value in resultPlaylistsAndTracks">
                 {{value.title}}
-                {{value.track}}
-                <ul ng-class="{'label-success' : value.track_count >= 1}">
-                    <li>{{track.title}}</li>
+                <ul>
+                    <li ng-repeat="value in value.tracks">
+                        {{value.title}}
+                    </li>
                 </ul>
             </li>
         </ul>
-    </div>-->
+    </div>
 
 
 </body>
